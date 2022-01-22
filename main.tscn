@@ -45,6 +45,7 @@ __meta__ = {
 }
 
 [node name="alien_pink" parent="player" instance=ExtResource( 2 )]
+frame = 1
 playing = true
 
 [node name="collision_shape_2d" type="CollisionShape2D" parent="player"]
@@ -147,9 +148,8 @@ custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "0"
 
 [node name="left_button" type="TouchScreenButton" parent="HUD"]
-visible = false
 self_modulate = Color( 1, 1, 1, 0.54902 )
-position = Vector2( 150, 500 )
+position = Vector2( 0.073761, 399.745 )
 shape = SubResource( 4 )
 passby_press = true
 visibility_mode = 1
@@ -158,26 +158,26 @@ __meta__ = {
 }
 
 [node name="color_rect" type="ColorRect" parent="HUD/left_button"]
-margin_left = -150.0
-margin_top = -100.0
-margin_right = 150.0
-margin_bottom = 100.0
+margin_right = 300.0
+margin_bottom = 200.0
 color = Color( 0, 0, 1, 0.486275 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="label2" type="Label" parent="HUD/left_button"]
-margin_left = -50.0
-margin_top = -15.5
-margin_right = 85.0
-margin_bottom = 20.5
+margin_left = 78.5119
+margin_top = 77.7341
+margin_right = 213.512
+margin_bottom = 113.734
 custom_fonts/font = ExtResource( 9 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "LEFT"
 
 [node name="right_button" type="TouchScreenButton" parent="HUD"]
-visible = false
 self_modulate = Color( 1, 1, 1, 0.54902 )
-position = Vector2( 480, 500 )
+position = Vector2( 315.036, 399.74 )
 shape = SubResource( 4 )
 passby_press = true
 visibility_mode = 1
@@ -186,26 +186,23 @@ __meta__ = {
 }
 
 [node name="color_rect" type="ColorRect" parent="HUD/right_button"]
-margin_left = -150.0
-margin_top = -100.0
-margin_right = 150.0
-margin_bottom = 100.0
+margin_right = 300.0
+margin_bottom = 200.0
 color = Color( 0, 0, 1, 0.486275 )
 
 [node name="label2" type="Label" parent="HUD/right_button"]
-margin_left = -50.0
-margin_top = -15.5
-margin_right = 85.0
-margin_bottom = 20.5
+margin_left = 69.6924
+margin_top = 76.4742
+margin_right = 204.692
+margin_bottom = 112.474
 custom_fonts/font = ExtResource( 9 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "RIGHT"
 
 [node name="jump_button" type="TouchScreenButton" parent="HUD"]
-visible = false
 self_modulate = Color( 1, 1, 1, 0.54902 )
-position = Vector2( 870, 500 )
+position = Vector2( 718.186, 397.225 )
 shape = SubResource( 4 )
 passby_press = true
 visibility_mode = 1
@@ -214,21 +211,25 @@ __meta__ = {
 }
 
 [node name="color_rect" type="ColorRect" parent="HUD/jump_button"]
-margin_left = -150.0
-margin_top = -100.0
-margin_right = 150.0
-margin_bottom = 100.0
+margin_right = 300.0
+margin_bottom = 200.0
 color = Color( 0, 0, 1, 0.486275 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="label2" type="Label" parent="HUD/jump_button"]
-margin_left = -50.0
-margin_top = -15.5
-margin_right = 85.0
-margin_bottom = 20.5
+margin_left = 87.3314
+margin_top = 78.994
+margin_right = 222.331
+margin_bottom = 114.994
 custom_fonts/font = ExtResource( 9 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "JUMP"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [connection signal="pressed" from="HUD/left_button" to="HUD" method="_on_left_button_pressed"]
 [connection signal="released" from="HUD/left_button" to="HUD" method="_on_left_button_released"]
